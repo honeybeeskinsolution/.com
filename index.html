@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,7 +19,7 @@ font-family:Poppins;
 }
 
 body{
-background:#f5efe6;
+background:#f8f4ea;
 color:#333;
 }
 
@@ -30,27 +29,37 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
+padding:20px 10%;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+box-shadow:0 3px 15px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:100;
 }
 
 nav h2{
 color:#c79b3b;
+font-weight:600;
 }
 
 nav a{
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
 color:#444;
 font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#c79b3b;
 }
 
 /* HERO */
 
 .hero{
-height:85vh;
-background:url(hero.jpg);
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url(hero.jpg);
 background-size:cover;
 background-position:center;
 display:flex;
@@ -62,20 +71,20 @@ padding:20px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
-margin-bottom:25px;
+font-size:20px;
+margin-bottom:30px;
 }
 
 .hero button{
 background:#c79b3b;
 border:none;
-padding:14px 28px;
-border-radius:30px;
+padding:16px 35px;
+border-radius:40px;
 color:white;
 font-size:16px;
 cursor:pointer;
@@ -84,64 +93,74 @@ cursor:pointer;
 /* ABOUT */
 
 .about{
-padding:80px 10%;
+padding:90px 10%;
 text-align:center;
 }
 
 .about h2{
 color:#c79b3b;
-margin-bottom:20px;
+margin-bottom:25px;
+font-size:32px;
 }
 
 .about p{
-max-width:700px;
+max-width:750px;
 margin:auto;
-line-height:1.7;
+line-height:1.8;
 }
 
 /* PRODUCTS */
 
 .products{
-padding:80px 10%;
+padding:90px 10%;
+background:white;
 }
 
 .products h2{
 text-align:center;
-margin-bottom:40px;
 color:#c79b3b;
+margin-bottom:50px;
+font-size:32px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:35px;
 }
 
 .card{
-background:white;
-padding:20px;
+background:#fff;
 border-radius:15px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+overflow:hidden;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 
 .card img{
 width:100%;
-height:200px;
+height:220px;
 object-fit:cover;
-border-radius:10px;
-margin-bottom:15px;
 }
 
-.card h4{
-margin-bottom:10px;
+.card-body{
+padding:20px;
+text-align:center;
 }
 
-.card button{
+.card-body h4{
+margin-bottom:12px;
+}
+
+.card-body button{
 background:#c79b3b;
 border:none;
-padding:10px 20px;
-border-radius:20px;
+padding:10px 22px;
+border-radius:25px;
 color:white;
 cursor:pointer;
 }
@@ -149,21 +168,39 @@ cursor:pointer;
 /* REVIEWS */
 
 .reviews{
+padding:90px 10%;
+background:#fff5d8;
+text-align:center;
+}
+
+.review-box{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+}
+
+/* GALLERY */
+
+.gallery{
 padding:80px 10%;
-background:#fff7e5;
 }
 
-.review-grid{
+.gallery h2{
+text-align:center;
+color:#c79b3b;
+margin-bottom:40px;
+}
+
+.gallery-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-.review{
-background:white;
-padding:25px;
+.gallery-grid img{
+width:100%;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
@@ -172,11 +209,10 @@ footer{
 background:#222;
 color:white;
 text-align:center;
-padding:40px;
-margin-top:60px;
+padding:50px 20px;
 }
 
-/* FLOATING WHATSAPP */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -184,11 +220,11 @@ bottom:25px;
 right:25px;
 background:#25D366;
 color:white;
-padding:15px 18px;
-border-radius:50px;
+padding:16px 20px;
+border-radius:40px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -210,23 +246,19 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div>
 
-<h1>Glow Naturally With Honeybee Skin Solution</h1>
+<h1>Luxury Skincare That Makes You Glow</h1>
 
-<p>Premium skincare products designed to nourish and brighten your skin.</p>
+<p>Discover premium Honeybee Skin Solution products</p>
 
-<button onclick="scrollProducts()">Browse Products</button>
+<button onclick="scrollProducts()">Shop Now</button>
 
 </div>
 
 </section>
-
-<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -234,16 +266,14 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 
 <p>
 
-Honeybee Skin Solution provides high-quality skincare products made to
-enhance natural beauty and confidence. Our products are carefully
-formulated to treat stretch marks, brighten skin tone, hydrate, and
-restore glow using powerful skincare ingredients.
+Honeybee Skin Solution provides luxury skincare products designed
+to brighten, nourish, and repair skin naturally. Our products
+help remove stretch marks, lighten dark spots, restore glow,
+and improve skin health.
 
 </p>
 
 </section>
-
-<!-- PRODUCTS -->
 
 <section class="products" id="products">
 
@@ -251,92 +281,63 @@ restore glow using powerful skincare ingredients.
 
 <div class="grid">
 
-<div class="card">
-<img src="products/stretch.jpg">
-<h4>Stretch Mark Soap & Peeling Gel</h4>
-<button onclick="order('Stretch Mark Soap & Peeling Gel')">Order</button>
-</div>
+<script>
 
-<div class="card">
-<img src="products/whitening.jpg">
-<h4>7 Days Super Whitening</h4>
-<button onclick="order('7 Days Super Whitening')">Order</button>
-</div>
+const products = [
+"Stretch Mark Soap & Peeling Gel with Oil",
+"7 Days Super Whitening",
+"Carrot Glow Oil",
+"Anti Bacteria Treatment Set For Face",
+"Brightening Glow Face Cream",
+"Lightening Soap For All Skin Type",
+"Instant Knuckles Treatment",
+"Perfume",
+"Pink Lips",
+"Spiritual Product"
+];
 
-<div class="card">
-<img src="products/carrot.jpg">
-<h4>Carrot Glow Oil</h4>
-<button onclick="order('Carrot Glow Oil')">Order</button>
-</div>
+products.forEach((p,i)=>{
 
+document.write(`
 <div class="card">
-<img src="products/antibacteria.jpg">
-<h4>Anti Bacteria Face Treatment</h4>
-<button onclick="order('Anti Bacteria Treatment Set')">Order</button>
+<img src="products/product${i+1}.jpg">
+<div class="card-body">
+<h4>${p}</h4>
+<button onclick="order('${p}')">Order</button>
 </div>
+</div>
+`);
 
-<div class="card">
-<img src="products/cream.jpg">
-<h4>Brightening Glow Face Cream</h4>
-<button onclick="order('Brightening Glow Face Cream')">Order</button>
-</div>
+});
 
-<div class="card">
-<img src="products/lightening.jpg">
-<h4>Lightening Soap</h4>
-<button onclick="order('Lightening Soap')">Order</button>
-</div>
-
-<div class="card">
-<img src="products/knuckle-soap.jpg">
-<h4>Instant Knuckles Soap</h4>
-<button onclick="order('Instant Knuckles Soap')">Order</button>
-</div>
-
-<div class="card">
-<img src="products/knuckle-oil.jpg">
-<h4>Instant Knuckles Oil</h4>
-<button onclick="order('Instant Knuckles Oil')">Order</button>
-</div>
-
-<div class="card">
-<img src="products/perfume.jpg">
-<h4>Perfume</h4>
-<button onclick="order('Perfume')">Order</button>
-</div>
-
-<div class="card">
-<img src="products/pinklips.jpg">
-<h4>Pink Lips</h4>
-<button onclick="order('Pink Lips')">Order</button>
-</div>
+</script>
 
 </div>
 
 </section>
 
-<!-- REVIEWS -->
-
 <section class="reviews" id="reviews">
 
-<h2 style="text-align:center;color:#c79b3b;margin-bottom:30px;">Customer Reviews</h2>
+<h2 style="color:#c79b3b;margin-bottom:30px;">Customer Reviews</h2>
 
-<div class="review-grid">
+<div class="review-box" id="reviewText">
 
-<div class="review">
-⭐⭐⭐⭐⭐  
-"Honeybee stretch mark soap worked perfectly for me!"
+"These products transformed my skin completely!"
+
 </div>
 
-<div class="review">
-⭐⭐⭐⭐⭐  
-"My skin is glowing after using the carrot glow oil."
-</div>
+</section>
 
-<div class="review">
-⭐⭐⭐⭐⭐  
-"Very effective skincare products. Highly recommended!"
-</div>
+<section class="gallery">
+
+<h2>Glow Results</h2>
+
+<div class="gallery-grid">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
 
 </div>
 
@@ -360,9 +361,9 @@ function order(product){
 
 let phone="2347041680517"
 
-let msg="Hello Honeybee Skin Solution, I want to order: "+product
+let message="Hello Honeybee Skin Solution, I want to order: "+product
 
-let url="https://wa.me/"+phone+"?text="+encodeURIComponent(msg)
+let url="https://wa.me/"+phone+"?text="+encodeURIComponent(message)
 
 window.open(url,'_blank')
 
@@ -370,9 +371,28 @@ window.open(url,'_blank')
 
 function scrollProducts(){
 
-document.getElementById("products").scrollIntoView({behavior:"smooth"})
+document.getElementById("products").scrollIntoView({
+behavior:"smooth"
+})
 
 }
+
+const reviews=[
+"These products transformed my skin completely!",
+"My stretch marks faded after using the soap!",
+"The carrot glow oil is amazing!",
+"My face is glowing after just 7 days!"
+]
+
+let i=0
+
+setInterval(()=>{
+
+i=(i+1)%reviews.length
+
+document.getElementById("reviewText").innerText=reviews[i]
+
+},4000)
 
 </script>
 
