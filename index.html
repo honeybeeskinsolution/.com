@@ -7,7 +7,7 @@
 
 <title>Honeybee Skin Solution</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,7 +19,7 @@ font-family:Poppins;
 }
 
 body{
-background:#f8f4ea;
+background:#faf6ef;
 color:#333;
 }
 
@@ -29,9 +29,9 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
+padding:20px 8%;
 background:white;
-box-shadow:0 3px 15px rgba(0,0,0,0.1);
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
 z-index:100;
@@ -39,7 +39,7 @@ z-index:100;
 
 nav h2{
 color:#c79b3b;
-font-weight:600;
+font-weight:700;
 }
 
 nav a{
@@ -57,8 +57,9 @@ color:#c79b3b;
 /* HERO */
 
 .hero{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+height:92vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
 url(hero.jpg);
 background-size:cover;
 background-position:center;
@@ -71,79 +72,81 @@ padding:20px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:60px;
 margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
 .hero button{
 background:#c79b3b;
 border:none;
-padding:16px 35px;
+padding:16px 38px;
 border-radius:40px;
-color:white;
 font-size:16px;
+color:white;
 cursor:pointer;
 }
 
 /* ABOUT */
 
 .about{
-padding:90px 10%;
+padding:100px 10%;
 text-align:center;
 }
 
 .about h2{
 color:#c79b3b;
+font-size:34px;
 margin-bottom:25px;
-font-size:32px;
 }
 
 .about p{
-max-width:750px;
+max-width:700px;
 margin:auto;
 line-height:1.8;
+font-size:17px;
 }
 
 /* PRODUCTS */
 
 .products{
-padding:90px 10%;
+padding:100px 10%;
 background:white;
 }
 
 .products h2{
 text-align:center;
 color:#c79b3b;
-margin-bottom:50px;
-font-size:32px;
+font-size:34px;
+margin-bottom:60px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:35px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
 }
 
 .card{
-background:#fff;
+background:white;
 border-radius:15px;
 overflow:hidden;
-box-shadow:0 6px 25px rgba(0,0,0,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 transition:.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 .card img{
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
 }
 
@@ -153,13 +156,15 @@ text-align:center;
 }
 
 .card-body h4{
-margin-bottom:12px;
+margin-bottom:10px;
+font-size:18px;
 }
 
 .card-body button{
+margin-top:10px;
 background:#c79b3b;
 border:none;
-padding:10px 22px;
+padding:10px 25px;
 border-radius:25px;
 color:white;
 cursor:pointer;
@@ -168,48 +173,56 @@ cursor:pointer;
 /* REVIEWS */
 
 .reviews{
-padding:90px 10%;
-background:#fff5d8;
+padding:100px 10%;
+background:#fff4d8;
 text-align:center;
 }
 
-.review-box{
-max-width:700px;
-margin:auto;
-font-size:18px;
-line-height:1.6;
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.review{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 /* GALLERY */
 
 .gallery{
-padding:80px 10%;
+padding:100px 10%;
 }
 
 .gallery h2{
 text-align:center;
 color:#c79b3b;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
 .gallery-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .gallery-grid img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 }
 
 /* FOOTER */
 
 footer{
-background:#222;
+background:#1a1a1a;
 color:white;
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
+margin-top:60px;
 }
 
 /* WHATSAPP */
@@ -219,16 +232,15 @@ position:fixed;
 bottom:25px;
 right:25px;
 background:#25D366;
+padding:16px 22px;
 color:white;
-padding:16px 20px;
 border-radius:40px;
 text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
+font-weight:600;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
 }
 
 </style>
-
 </head>
 
 <body>
@@ -250,11 +262,11 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
 <div>
 
-<h1>Luxury Skincare That Makes You Glow</h1>
+<h1>Glow With Honeybee Skin</h1>
 
-<p>Discover premium Honeybee Skin Solution products</p>
+<p>Luxury skincare products for radiant glowing skin</p>
 
-<button onclick="scrollProducts()">Shop Now</button>
+<button onclick="scrollProducts()">Shop Products</button>
 
 </div>
 
@@ -266,10 +278,10 @@ box-shadow:0 5px 20px rgba(0,0,0,0.3);
 
 <p>
 
-Honeybee Skin Solution provides luxury skincare products designed
-to brighten, nourish, and repair skin naturally. Our products
-help remove stretch marks, lighten dark spots, restore glow,
-and improve skin health.
+Honeybee Skin Solution provides premium skincare products formulated
+to brighten, nourish, and repair your skin naturally.
+Our products help treat stretch marks, lighten dark spots,
+and restore healthy glowing skin.
 
 </p>
 
@@ -284,28 +296,38 @@ and improve skin health.
 <script>
 
 const products = [
+
 "Stretch Mark Soap & Peeling Gel with Oil",
 "7 Days Super Whitening",
 "Carrot Glow Oil",
-"Anti Bacteria Treatment Set For Face",
+"Anti Bacteria Treatment Set",
 "Brightening Glow Face Cream",
-"Lightening Soap For All Skin Type",
+"Lightening Soap For All Skin",
 "Instant Knuckles Treatment",
 "Perfume",
 "Pink Lips",
 "Spiritual Product"
+
 ];
 
 products.forEach((p,i)=>{
 
 document.write(`
+
 <div class="card">
+
 <img src="products/product${i+1}.jpg">
+
 <div class="card-body">
+
 <h4>${p}</h4>
+
 <button onclick="order('${p}')">Order</button>
+
 </div>
+
 </div>
+
 `);
 
 });
@@ -318,11 +340,24 @@ document.write(`
 
 <section class="reviews" id="reviews">
 
-<h2 style="color:#c79b3b;margin-bottom:30px;">Customer Reviews</h2>
+<h2 style="color:#c79b3b">Customer Reviews</h2>
 
-<div class="review-box" id="reviewText">
+<div class="review-grid">
 
-"These products transformed my skin completely!"
+<div class="review">
+⭐⭐⭐⭐⭐  
+"My skin started glowing after using carrot glow oil!"
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+"The stretch mark soap works perfectly!"
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+"Best skincare brand I’ve used."
+</div>
 
 </div>
 
@@ -330,7 +365,7 @@ document.write(`
 
 <section class="gallery">
 
-<h2>Glow Results</h2>
+<h2>Results Gallery</h2>
 
 <div class="gallery-grid">
 
@@ -349,11 +384,14 @@ document.write(`
 
 <br><br>
 
-WhatsApp: 07041680517 / 09014184352
+WhatsApp Orders  
+07041680517 | 09014184352
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/2347041680517">Chat on WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/2347041680517">
+Chat on WhatsApp
+</a>
 
 <script>
 
@@ -376,23 +414,6 @@ behavior:"smooth"
 })
 
 }
-
-const reviews=[
-"These products transformed my skin completely!",
-"My stretch marks faded after using the soap!",
-"The carrot glow oil is amazing!",
-"My face is glowing after just 7 days!"
-]
-
-let i=0
-
-setInterval(()=>{
-
-i=(i+1)%reviews.length
-
-document.getElementById("reviewText").innerText=reviews[i]
-
-},4000)
 
 </script>
 
