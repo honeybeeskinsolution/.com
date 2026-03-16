@@ -1,421 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Honeybee Skin Solution</title>
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
+  margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;
 }
-
-body{
-background:#faf6ef;
-color:#333;
-}
+body{background:#faf6ef; color:#333; scroll-behavior:smooth;}
 
 /* NAVBAR */
-
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-position:sticky;
-top:0;
-z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 8%; background:white; box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  position:sticky; top:0; z-index:100;
 }
-
-nav h2{
-color:#c79b3b;
-font-weight:700;
-}
-
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:#444;
-font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-color:#c79b3b;
-}
+nav h2{color:#c79b3b; font-weight:700; font-size:28px;}
+nav a{margin-left:25px; text-decoration:none; color:#444; font-weight:500; transition:.3s;}
+nav a:hover{color:#c79b3b;}
 
 /* HERO */
-
 .hero{
-height:92vh;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url(hero.jpg);
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
+  height:100vh;
+  background: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url('hero.jpg') center/cover no-repeat;
+  display:flex; align-items:center; justify-content:center; text-align:center; color:white; padding:20px;
 }
-
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:35px;
-}
-
+.hero h1{font-size:60px; margin-bottom:20px; line-height:1.2;}
+.hero p{font-size:20px; margin-bottom:35px;}
 .hero button{
-background:#c79b3b;
-border:none;
-padding:16px 38px;
-border-radius:40px;
-font-size:16px;
-color:white;
-cursor:pointer;
+  background:#c79b3b; border:none; padding:16px 38px; border-radius:40px;
+  font-size:16px; color:white; cursor:pointer; transition:.3s;
 }
+.hero button:hover{background:#b3862e;}
 
 /* ABOUT */
-
-.about{
-padding:100px 10%;
-text-align:center;
-}
-
-.about h2{
-color:#c79b3b;
-font-size:34px;
-margin-bottom:25px;
-}
-
-.about p{
-max-width:700px;
-margin:auto;
-line-height:1.8;
-font-size:17px;
-}
+.about{padding:100px 10%; text-align:center;}
+.about h2{color:#c79b3b; font-size:34px; margin-bottom:25px;}
+.about p{max-width:700px; margin:auto; line-height:1.8; font-size:17px;}
 
 /* PRODUCTS */
-
-.products{
-padding:100px 10%;
-background:white;
-}
-
-.products h2{
-text-align:center;
-color:#c79b3b;
-font-size:34px;
-margin-bottom:60px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:40px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
-
-.card img{
-width:100%;
-height:230px;
-object-fit:cover;
-}
-
-.card-body{
-padding:20px;
-text-align:center;
-}
-
-.card-body h4{
-margin-bottom:10px;
-font-size:18px;
-}
-
+.products{padding:100px 10%; background:white;}
+.products h2{text-align:center; color:#c79b3b; font-size:34px; margin-bottom:60px;}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:40px;}
+.card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:.4s;}
+.card:hover{transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.15);}
+.card img{width:100%; height:230px; object-fit:cover;}
+.card-body{padding:20px; text-align:center;}
+.card-body h4{margin-bottom:10px; font-size:18px;}
+.card-body p{margin:5px 0; font-weight:600;}
 .card-body button{
-margin-top:10px;
-background:#c79b3b;
-border:none;
-padding:10px 25px;
-border-radius:25px;
-color:white;
-cursor:pointer;
+  margin-top:10px; background:#c79b3b; border:none; padding:10px 25px;
+  border-radius:25px; color:white; cursor:pointer; transition:.3s;
 }
+.card-body button:hover{background:#b3862e;}
 
 /* REVIEWS */
-
-.reviews{
-padding:100px 10%;
-background:#fff4d8;
-text-align:center;
-}
-
-.review-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.review{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
+.reviews{padding:100px 10%; background:#fff4d8; text-align:center;}
+.review-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; margin-top:40px;}
+.review{background:white; padding:30px; border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,0.1); font-style:italic;}
 
 /* GALLERY */
-
-.gallery{
-padding:100px 10%;
-}
-
-.gallery h2{
-text-align:center;
-color:#c79b3b;
-margin-bottom:50px;
-}
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-}
-
-.gallery-grid img{
-width:100%;
-border-radius:12px;
-}
+.gallery{padding:100px 10%;}
+.gallery h2{text-align:center; color:#c79b3b; margin-bottom:50px;}
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:25px;}
+.gallery-grid img{width:100%; border-radius:12px; transition:.3s;}
+.gallery-grid img:hover{transform:scale(1.05);}
 
 /* FOOTER */
+footer{background:#1a1a1a; color:white; text-align:center; padding:60px 20px; margin-top:60px; font-size:14px;}
 
-footer{
-background:#1a1a1a;
-color:white;
-text-align:center;
-padding:60px 20px;
-margin-top:60px;
+/* SOCIAL FLOAT BUTTONS */
+.social-fixed{
+  position:fixed; bottom:25px; right:25px; display:flex; flex-direction:column; gap:15px; z-index:1000;
 }
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-padding:16px 22px;
-color:white;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-box-shadow:0 8px 25px rgba(0,0,0,0.2);
+.social-fixed a{
+  display:flex; align-items:center; justify-content:center; width:60px; height:60px;
+  color:white; border-radius:50%; font-size:28px; box-shadow:0 8px 25px rgba(0,0,0,0.2); transition:.3s;
 }
+.social-fixed a:hover{transform:scale(1.1);}
+.whatsapp-btn{background:#25D366;}
+.tiktok-btn{background:black;}
 
+/* CART */
+#cart-icon{
+  position:fixed; top:20px; right:100px; background:#c79b3b;
+  width:60px; height:60px; border-radius:50%; display:flex; justify-content:center; align-items:center;
+  color:white; font-size:28px; cursor:pointer; z-index:1001; box-shadow:0 8px 25px rgba(0,0,0,0.2); transition:.3s;
+}
+#cart-icon:hover{transform:scale(1.1);}
+#cart-panel{
+  position:fixed; top:0; right:-400px; width:400px; height:100%;
+  background:white; box-shadow:-5px 0 25px rgba(0,0,0,0.2); transition:.4s; z-index:1000;
+  padding:20px; overflow-y:auto;
+}
+#cart-panel.open{right:0;}
+#cart-panel h3{margin-bottom:20px; color:#c79b3b;}
+.cart-item{
+  display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;
+}
+.cart-item span{flex:1; margin-right:5px;}
+.cart-item button{background:red; border:none; color:white; padding:4px 8px; border-radius:5px; cursor:pointer;}
+#cart-total{margin-top:10px; font-weight:600; text-align:right;}
+#checkout-btn{
+  margin-top:20px; background:#25D366; color:white; border:none; padding:12px 20px;
+  border-radius:25px; width:100%; cursor:pointer; font-weight:600;
+}
+#clear-cart{
+  margin-top:10px; background:#e74c3c; color:white; border:none; padding:10px; border-radius:25px;
+  width:100%; cursor:pointer; font-weight:600;
+}
 </style>
 </head>
-
 <body>
 
 <nav>
-
-<h2>Honeybee Skin</h2>
-
-<div>
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#reviews">Reviews</a>
-</div>
-
+  <h2>Honeybee Skin</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#reviews">Reviews</a>
+  </div>
 </nav>
 
 <section class="hero">
-
-<div>
-
-<h1>Glow With Honeybee Skin</h1>
-
-<p>Luxury skincare products for radiant glowing skin</p>
-
-<button onclick="scrollProducts()">Shop Products</button>
-
-</div>
-
+  <div>
+    <h1>Glow With Honeybee Skin</h1>
+    <p>Luxury skincare products for radiant glowing skin</p>
+    <button onclick="scrollProducts()">Shop Products</button>
+  </div>
 </section>
 
 <section class="about" id="about">
-
-<h2>About Honeybee Skin Solution</h2>
-
-<p>
-
-Honeybee Skin Solution provides premium skincare products formulated
-to brighten, nourish, and repair your skin naturally.
-Our products help treat stretch marks, lighten dark spots,
-and restore healthy glowing skin.
-
-</p>
-
+  <h2>About Honeybee Skin Solution</h2>
+  <p>
+    Honeybee Skin Solution provides premium skincare products formulated
+    to brighten, nourish, and repair your skin naturally.
+    Our products help treat stretch marks, lighten dark spots,
+    and restore healthy glowing skin.
+  </p>
 </section>
 
 <section class="products" id="products">
-
-<h2>Our Products</h2>
-
-<div class="grid">
-
-<script>
-
-const products = [
-
-"Stretch Mark Soap & Peeling Gel with Oil",
-"7 Days Super Whitening",
-"Carrot Glow Oil",
-"Anti Bacteria Treatment Set",
-"Brightening Glow Face Cream",
-"Lightening Soap For All Skin",
-"Instant Knuckles Treatment",
-"Perfume",
-"Pink Lips",
-"Spiritual Product"
-
-];
-
-products.forEach((p,i)=>{
-
-document.write(`
-
-<div class="card">
-
-<img src="products/product${i+1}.jpg">
-
-<div class="card-body">
-
-<h4>${p}</h4>
-
-<button onclick="order('${p}')">Order</button>
-
-</div>
-
-</div>
-
-`);
-
-});
-
-</script>
-
-</div>
-
+  <h2>Our Products</h2>
+  <div class="grid" id="product-grid"></div>
 </section>
 
 <section class="reviews" id="reviews">
-
-<h2 style="color:#c79b3b">Customer Reviews</h2>
-
-<div class="review-grid">
-
-<div class="review">
-⭐⭐⭐⭐⭐  
-"My skin started glowing after using carrot glow oil!"
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐  
-"The stretch mark soap works perfectly!"
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐  
-"Best skincare brand I’ve used."
-</div>
-
-</div>
-
+  <h2 style="color:#c79b3b">Customer Reviews</h2>
+  <div class="review-grid">
+    <div class="review">⭐⭐⭐⭐⭐ "My skin started glowing after using carrot glow oil!"</div>
+    <div class="review">⭐⭐⭐⭐⭐ "The stretch mark soap works perfectly!"</div>
+    <div class="review">⭐⭐⭐⭐⭐ "Best skincare brand I’ve used."</div>
+  </div>
 </section>
 
 <section class="gallery">
-
-<h2>Results Gallery</h2>
-
-<div class="gallery-grid">
-
-<img src="gallery1.jpg">
-<img src="gallery2.jpg">
-<img src="gallery3.jpg">
-<img src="gallery4.jpg">
-
-</div>
-
+  <h2>Results Gallery</h2>
+  <div class="gallery-grid">
+    <img src="gallery1.jpg">
+    <img src="gallery2.jpg">
+    <img src="gallery3.jpg">
+    <img src="gallery4.jpg">
+  </div>
 </section>
 
 <footer>
-
-© 2026 Honeybee Skin Solution
-
-<br><br>
-
-WhatsApp Orders  
-07041680517 | 09014184352
-
+  © 2026 Honeybee Skin Solution
+  <br><br>
+  WhatsApp Orders: 07041680517 | 09014184352
+  <br>
+  TikTok: <a href="https://www.tiktok.com/@honeybeeskincaresolution" target="_blank" style="color:#c79b3b;text-decoration:none;">@honeybeeskincaresolution</a>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/2347041680517">
-Chat on WhatsApp
-</a>
+<!-- Cart Icon & Panel -->
+<div id="cart-icon"><i class="fas fa-shopping-cart"></i></div>
+<div id="cart-panel">
+  <h3>Your Cart</h3>
+  <div id="cart-items"></div>
+  <div id="cart-total"></div>
+  <button id="checkout-btn">Checkout via WhatsApp</button>
+  <button id="clear-cart">Clear Cart</button>
+</div>
+
+<!-- Social Floating Buttons -->
+<div class="social-fixed">
+  <a href="https://wa.me/2347041680517" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.tiktok.com/@honeybeeskincaresolution" target="_blank" class="tiktok-btn"><i class="fab fa-tiktok"></i></a>
+</div>
 
 <script>
+// Products with price
+const products = [
+  {name:"Stretch Mark Soap & Peeling Gel with Oil", price:2500},
+  {name:"7 Days Super Whitening", price:3000},
+  {name:"Carrot Glow Oil", price:4000},
+  {name:"Anti Bacteria Treatment Set", price:3500},
+  {name:"Brightening Glow Face Cream", price:2800},
+  {name:"Lightening Soap For All Skin", price:2000},
+  {name:"Instant Knuckles Treatment", price:2500},
+  {name:"Perfume", price:1800},
+  {name:"Pink Lips", price:1500},
+  {name:"Spiritual Product", price:5000}
+];
 
-function order(product){
+// Render products
+const productGrid = document.getElementById("product-grid");
+products.forEach((p,i)=>{
+  const card = document.createElement("div");
+  card.className="card";
+  card.innerHTML = `<img src="products/product${i+1}.jpg">
+  <div class="card-body">
+    <h4>${p.name}</h4>
+    <p>₦${p.price.toLocaleString()}</p>
+    <button onclick="addToCart(${i})">Add to Cart</button>
+  </div>`;
+  productGrid.appendChild(card);
+});
 
-let phone="2347041680517"
-
-let message="Hello Honeybee Skin Solution, I want to order: "+product
-
-let url="https://wa.me/"+phone+"?text="+encodeURIComponent(message)
-
-window.open(url,'_blank')
-
+// CART
+let cart=[];
+function addToCart(index){
+  const product=products[index];
+  const exist=cart.find(p=>p.name===product.name);
+  if(exist){exist.qty+=1;} else{cart.push({...product, qty:1});}
+  renderCart();
 }
 
-function scrollProducts(){
-
-document.getElementById("products").scrollIntoView({
-behavior:"smooth"
-})
-
+function renderCart(){
+  const cartItems=document.getElementById("cart-items");
+  const cartTotal=document.getElementById("cart-total");
+  cartItems.innerHTML="";
+  let total=0;
+  cart.forEach((p,i)=>{
+    const div=document.createElement("div");
+    div.className="cart-item";
+    div.innerHTML=`<span>${p.name} x ${p.qty} - ₦${(p.price*p.qty).toLocaleString()}</span>
+    <button onclick="removeFromCart(${i})">x</button>`;
+    cartItems.appendChild(div);
+    total+=p.price*p.qty;
+  });
+  cartTotal.textContent="Total: ₦"+total.toLocaleString();
 }
 
+function removeFromCart(index){cart.splice(index,1); renderCart();}
+
+// Clear cart
+document.getElementById("clear-cart").addEventListener("click", ()=>{
+  cart=[]; renderCart();
+});
+
+// Checkout via WhatsApp
+document.getElementById("checkout-btn").addEventListener("click", ()=>{
+  if(cart.length===0){alert("Cart is empty!"); return;}
+  let message="Hello Honeybee Skin Solution, I want to order:\n";
+  cart.forEach(p=>{message+=`${p.name} x ${p.qty} - ₦${(p.price*p.qty).toLocaleString()}\n`});
+  const url="https://wa.me/2347041680517?text="+encodeURIComponent(message);
+  window.open(url,"_blank");
+});
+
+// Scroll to products
+function scrollProducts(){document.getElementById("products").scrollIntoView({behavior:"smooth"});}
+
+// Toggle cart panel
+const cartIcon=document.getElementById("cart-icon");
+const cartPanel=document.getElementById("cart-panel");
+cartIcon.addEventListener("click",()=>{cartPanel.classList.toggle("open");});
 </script>
-
 </body>
 </html>
