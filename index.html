@@ -1,508 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Honeybee Skin Solution</title>
-  <style>
-    :root {
-      --bg: #746c63;
-      --card: #8a8178;
-      --soft: #9a9188;
-      --gold: #a37a17;
-      --gold-2: #d7af2f;
-      --gold-3: #f0d36a;
-      --text: #fff6de;
-      --muted: #f0e2b8;
-      --line: rgba(215,175,47,0.28);
-      --shadow: rgba(70, 48, 8, 0.32);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honeybee Skin Solution</title>
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #6f675f 0%, #887e74 55%, #746c63 100%);
-      color: var(--text);
-    }
+<style>
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
 
-    .container {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
+body{
+background:#f4ede3;
+color:#3b2f2f;
+}
 
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-      background: rgba(116,108,99,0.9);
-      border-bottom: 1px solid var(--line);
-    }
+/* HEADER */
 
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-      gap: 16px;
-    }
+header{
+text-align:center;
+padding:50px 20px 20px;
+}
 
-    .brand {
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: var(--gold-2);
-      font-size: 1.1rem;
-    }
+header h1{
+font-size:34px;
+color:#b98a2f;
+letter-spacing:2px;
+}
 
-    .brand span {
-      display: block;
-      font-size: 0.78rem;
-      color: var(--muted);
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
+header p{
+margin-top:10px;
+color:#7a6b55;
+font-size:16px;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      color: var(--text);
-      font-size: 0.95rem;
-    }
+/* HERO IMAGE */
 
-    .hero {
-      padding: 54px 0 28px;
-    }
+.hero{
+text-align:center;
+padding:20px;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: center;
-    }
+.hero img{
+width:90%;
+max-width:750px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
 
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid rgba(241,207,109,0.35);
-      border-radius: 999px;
-      color: var(--gold-2);
-      background: rgba(212,166,42,0.08);
-      margin-bottom: 18px;
-      font-size: 0.9rem;
-    }
+/* PRODUCTS */
 
-    h1 {
-      font-size: clamp(2.3rem, 5vw, 4.5rem);
-      line-height: 0.95;
-      margin: 0 0 16px;
-      color: var(--gold-2);
-      text-transform: uppercase;
-    }
+.products{
+max-width:850px;
+margin:auto;
+padding:40px 20px;
+}
 
-    .script {
-      font-family: cursive;
-      text-transform: none;
-      color: #fff1c0;
-      display: block;
-      font-size: clamp(1.6rem, 3vw, 2.7rem);
-      margin-top: 8px;
-      font-weight: 400;
-    }
+/* PRODUCT CONTAINER */
 
-    .hero p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 650px;
-      line-height: 1.7;
-    }
+.product{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#efe5d6;
+padding:14px 18px;
+margin-bottom:16px;
+border-radius:35px;
+box-shadow:0 6px 14px rgba(0,0,0,0.08);
+transition:0.2s;
+}
 
-    .actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
+.product:hover{
+transform:scale(1.01);
+}
 
-    .btn {
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid rgba(241,207,109,0.28);
-      transition: 0.25s ease;
-    }
+/* LEFT SIDE */
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), var(--gold-2));
-      color: #111;
-    }
+.product-left{
+display:flex;
+align-items:center;
+}
 
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-    }
+/* GOLD NUMBER */
 
-    .btn:hover { transform: translateY(-2px); }
+.number{
+background:#b98a2f;
+color:white;
+width:38px;
+height:38px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+margin-right:15px;
+}
 
-    .hero-card {
-      background: linear-gradient(180deg, rgba(215,175,47,0.16), rgba(255,246,222,0.06));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 18px;
-      box-shadow: 0 18px 60px var(--shadow);
-    }
+/* PRODUCT NAME */
 
-    .hero-card img {
-      width: 100%;
-      border-radius: 22px;
-      object-fit: cover;
-      aspect-ratio: 1 / 1;
-    }
+.product-name{
+font-size:16px;
+font-weight:500;
+color:#3d3427;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 16px;
-    }
+/* ORDER BUTTON */
 
-    .stat {
-      background: rgba(255,246,222,0.08);
-      border-radius: 18px;
-      padding: 14px;
-      text-align: center;
-      border: 1px solid rgba(255,246,222,0.12);
-    }
+.order-btn{
+background:#b98a2f;
+border:none;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+}
 
-    .stat strong {
-      display: block;
-      font-size: 1.2rem;
-      color: var(--gold-2);
-    }
+.order-btn:hover{
+background:#a67925;
+}
 
-    section {
-      padding: 28px 0 12px;
-    }
+/* FOOTER */
 
-    .section-title {
-      font-size: 2rem;
-      margin: 0 0 10px;
-      color: var(--gold-2);
-    }
+footer{
+text-align:center;
+padding:40px;
+color:#7a6b55;
+font-size:14px;
+}
 
-    .section-copy {
-      color: var(--muted);
-      max-width: 720px;
-      line-height: 1.7;
-      margin-bottom: 22px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .product {
-      background: linear-gradient(180deg, rgba(138,129,120,0.96), rgba(116,108,99,0.98));
-      border: 1px solid rgba(212,166,42,0.16);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 12px 35px var(--shadow);
-    }
-
-    .product-image {
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: #222;
-    }
-
-    .product-image img { width: 100%; height: 100%; object-fit: cover; }
-
-    .product-body { padding: 18px; }
-
-    .product h3 {
-      margin: 0 0 8px;
-      font-size: 1.18rem;
-    }
-
-    .price {
-      color: var(--gold-2);
-      font-size: 1.45rem;
-      font-weight: 800;
-      margin: 10px 0;
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 0.96rem;
-      line-height: 1.6;
-    }
-
-    .combo {
-      margin-top: 22px;
-      background: linear-gradient(180deg, rgba(215,175,47,0.18), rgba(255,246,222,0.05));
-      border: 1px solid rgba(212,166,42,0.18);
-      border-radius: 26px;
-      padding: 22px;
-    }
-
-    .combo strong { color: var(--gold-2); }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .benefit {
-      backgro
-      border-radius: 22px;
-      padding: 20px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .benefit h4 { margin: 0 0 10px; color: var(--gold-2); }
-    .benefit p { margin: 0; color: var(--muted); line-height: 1.7; }
-
-    .contact-box {
-      background: linear-gradient(180deg, rgba(138,129,120,0.96), rgba(116,108,99,0.98));
-      border-radius: 28px;
-      padding: 24px;
-      border: 1px solid rgba(212,166,42,0.2);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .contact-box p { color: var(--muted); line-height: 1.8; }
-    .contact-card {
-      background: rgba(255,246,222,0.08);
-      border-radius: 20px;
-      padding: 18px;
-    }
-
-    footer {
-      padding: 28px 0 40px;
-      color: #a9a08d;
-      text-align: center;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid, .products, .benefits, .contact-box {
-        grid-template-columns: 1fr;
-      }
-      .stats { grid-template-columns: 1fr; }
-      .nav-inner { align-items: flex-start; flex-direction: column; }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <div class="brand">HONEYBEE<span>Skin Solution</span></div>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#benefits">Benefits</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
 
-  <header class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Premium stretch mark care</div>
-        <h1>Honeybee <span class="script">Skin Solution</span></h1>
-        <p>
-          A clean product landing page for your brand, focused on your stretch mark soap,
-          peeling gel, and oil. This design matches the bold premium feel from your flyer,
-          but makes it easier for customers to view products and contact you.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#products">View Products</a>
-          <a class="btn btn-secondary" href="#contact">Order Now</a>
-        </div>
-      </div>
 
-      <div class="hero-card">
-        <img src="/mnt/data/WhatsApp Image 2026-03-16 at 11.57.00 AM.jpeg" alt="Honeybee Skin Solution flyer" />
-        <div class="stats">
-          <div class="stat"><strong>₦10,000</strong><span>Soap</span></div>
-          <div class="stat"><strong>₦10,000</strong><span>Oil</span></div>
-          <div class="stat"><strong>₦10,000</strong><span>Peeling Gel</span></div>
-        </div>
-      </div>
-    </div>
-  </header>
+<header>
 
-  <section id="products">
-    <div class="container">
-      <h2 class="section-title">Featured Products</h2>
-      <p class="section-copy">
-        Simple pricing for your normal stretch mark combo items. You can later add more products,
-        wholesale packages, or customized combos.
-      </p>
+<h1>Honeybee Skin Solution</h1>
 
-      <div class="products">
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.37 AM.jpeg" alt="Stretch mark soap and peeling gel with oil" />
-          </div>
-          <div class="product-body">
-            <h3>Stretch Mark Soap and Peeling Gel with Oil</h3>
-            <div class="price">Available on request</div>
-            <p class="note">Your signature stretch mark care combo for customers who want the full routine.</p>
-          </div>
-        </article>
+<p>Natural Luxury Skincare</p>
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.18 AM.jpeg" alt="7 days super whitening" />
-          </div>
-          <div class="product-body">
-            <h3>7 Days Super Whitening</h3>
-            <div class="price">Available on request</div>
-            <p class="note">A bold brightening option featured as part of your skincare collection.</p>
-          </div>
-        </article>
+</header>
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.37 AM.jpeg" alt="Carrot glow oil" />
-          </div>
-          <div class="product-body">
-            <h3>Carrot Glow Oil</h3>
-            <div class="price">Available on request</div>
-            <p class="note">Designed for nourished-looking skin and a rich glowing body care routine.</p>
-          </div>
-        </article>
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.18 AM.jpeg" alt="Anti bacteria treatment set for face" />
-          </div>
-          <div class="product-body">
-            <h3>Anti Bacteria Treatment Set for Face</h3>
-            <div class="price">Available on request</div>
-            <p class="note">A face care set positioned for targeted treatment and daily support.</p>
-          </div>
-        </article>
+<div class="hero">
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.37 AM.jpeg" alt="Brightening glow face cream" />
-          </div>
-          <div class="product-body">
-            <h3>Brightening Glow Face Cream</h3>
-            <div class="price">Available on request</div>
-            <p class="note">A cream for customers looking for a brighter and smoother face care finish.</p>
-          </div>
-        </article>
+<img src="products.jpg" alt="Honeybee Skin Products">
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.37 AM.jpeg" alt="Lightening soap for all skin type" />
-          </div>
-          <div class="product-body">
-            <h3>Lightening Soap for All Skin Types</h3>
-            <div class="price">Available on request</div>
-            <p class="note">A general-use soap option for a wider customer range across skin types.</p>
-          </div>
-        </article>
+</div>
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.18 AM.jpeg" alt="Instant knuckles" />
-          </div>
-          <div class="product-body">
-            <h3>Instant Knuckles</h3>
-            <div class="price">Available on request</div>
-            <p class="note">A specialized treatment item for darker knuckles and targeted body areas.</p>
-          </div>
-        </article>
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.18 AM.jpeg" alt="Perfume" />
-          </div>
-          <div class="product-body">
-            <h3>Perfume</h3>
-            <div class="price">Available on request</div>
-            <p class="note">A fragrance option to round out your beauty and personal care collection.</p>
-          </div>
-        </article>
+<section class="products">
 
-        <article class="product">
-          <div class="product-image">
-            <img src="/mnt/data/WhatsApp Image 2026-03-16 at 10.36.18 AM.jpeg" alt="Pink lips" />
-          </div>
-          <div class="product-body">
-            <h3>Pink Lips</h3>
-            <div class="price">Available on request</div>
-            <p class="note">A lip care product for customers looking for a softer and brighter lip look.</p>
-          </div>
-        </article>
-      </div>
 
-      <div class="combo">
-        <strong>Normal combo price:</strong> ₦30,000 for soap, oil, and peeling gel together.
-      </div>
-    </div>
-  </section>
+<div class="product">
+<div class="product-left">
+<div class="number">1</div>
+<div class="product-name">Stretch Mark Soap & Peeling Gel with Oil</div>
+</div>
+<button class="order-btn" onclick="order('Stretch Mark Soap & Peeling Gel with Oil')">Order</button>
+</div>
 
-  <section id="benefits">
-    <div class="container">
-      <h2 class="section-title">Why customers choose Honeybee</h2>
-      <div class="benefits">
-        <div class="benefit">
-          <h4>Premium brand look</h4>
-          <p>Your website carries the same gold luxury feel as your flyer and product ads.</p>
-        </div>
-        <div class="benefit">
-          <h4>Easy product pricing</h4>
-          <p>Customers can quickly see each item price and understand the combo offer.</p>
-        </div>
-        <div class="benefit">
-          <h4>Ready for GitHub Pages</h4>
-          <p>This is a single-file website, so it is easy to upload and publish online.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact Honeybee</h2>
-      <div class="contact-box">
-        <div>
-          <p>
-            Reach out for orders, wholesale supply, and product inquiries. Replace the contact details
-            below with your exact WhatsApp number, Instagram handle, and delivery details.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://wa.me/2347041680517">WhatsApp Us</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <p><strong>Brand:</strong> Honeybee Skin Solution</p>
-          <p><strong>Phone 1:</strong> 07041680517</p>
-          <p><strong>Phone 2:</strong> 09014184352</p>
-          <p><strong>Products:</strong> Stretch Mark Soap, Peeling Gel with Oil, 7 Days Super Whitening, Carrot Glow Oil, Anti Bacteria Treatment Set for Face, Brightening Glow Face Cream, Lightening Soap for All Skin Types, Instant Knuckles, Perfume, Pink Lips</p>
-          <p><strong>Combo:</strong> ₦30,000</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="product">
+<div class="product-left">
+<div class="number">2</div>
+<div class="product-name">7 Days Super Whitening</div>
+</div>
+<button class="order-btn" onclick="order('7 Days Super Whitening')">Order</button>
+</div>
 
-  <footer>
-    <div class="container">© 2026 Honeybee Skin Solution. All rights reserved.</div>
-  </footer>
+
+<div class="product">
+<div class="product-left">
+<div class="number">3</div>
+<div class="product-name">Carrot Glow Oil</div>
+</div>
+<button class="order-btn" onclick="order('Carrot Glow Oil')">Order</button>
+</div>
+
+
+<div class="product">
+<div class="product-left">
+<div class="number">4</div>
+<div class="product-name">Anti Bacteria Treatment Set For Face</div>
+</div>
+<button class="order-btn" onclick="order('Anti Bacteria Treatment Set For Face')">Order</button>
+</div>
+
+
+<div class="product">
+<div class="product-left">
+<div class="number">5</div>
+<div class="product-name">Brightening Glow Face Cream</div>
+</div>
+<button class="order-btn" onclick="order('Brightening Glow Face Cream')">Order</button>
+</div>
+
+
+<div class="product">
+<div class="product-left">
+<div class="number">6</div>
+<div class="product-name">Lightening Soap For All Skin Type</div>
+</div>
+<button class="order-btn" onclick="order('Lightening Soap For All Skin Type')">Order</button>
+</div>
+
+
+<div class="product">
+<div class="product-left">
+<div class="number">7</div>
+<div class="product-name">Instant Knuckles Soap</div>
+</div>
+<button class="order-btn" onclick="order('Instant Knuckles Soap')">Order</button>
+</div>
+
+
+<div class="product">
+<div class="product-left">
+<div class="number">8</div>
+<div class="product-name">Instant Knuckles Oil</div>
+</div>
+<button class="order-btn" onclick="order('Instant Knuckles Oil')">Order</button>
+</div>
+
+
+<div class="product">
+<div class="product-left">
+<div class="number">9</div>
+<div class="product-name">Perfume</div>
+</div>
+<button class="order-btn" onclick="order('Perfume')">Order</button>
+</div>
+
+
+<div class="product">
+<div class="product-left">
+<div class="number">10</div>
+<div class="product-name">Pink Lips</div>
+</div>
+<button class="order-btn" onclick="order('Pink Lips')">Order</button>
+</div>
+
+
+</section>
+
+
+<footer>
+
+© 2026 Honeybee Skin Solution
+
+</footer>
+
+
+<script>
+
+function order(product){
+
+let phone = "2348145934938"
+
+let message = "Hello Honeybee Skin Solution, I want to order: " + product
+
+let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+
+window.open(url,'_blank')
+
+}
+
+</script>
+
+
 </body>
 </html>
