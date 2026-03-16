@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Honeybee Skin Solution</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,269 +16,365 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: "Segoe UI", sans-serif;
+font-family:Poppins;
 }
 
 body{
-background:#f4ede3;
-color:#3b2f2f;
+background:#f5efe6;
+color:#333;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
-text-align:center;
-padding:50px 20px 20px;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-header h1{
-font-size:34px;
-color:#b98a2f;
-letter-spacing:2px;
+nav h2{
+color:#c79b3b;
 }
 
-header p{
-margin-top:10px;
-color:#7a6b55;
-font-size:16px;
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#444;
+font-weight:500;
 }
 
-/* HERO IMAGE */
+/* HERO */
 
 .hero{
+height:85vh;
+background:url(hero.jpg);
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+color:white;
 padding:20px;
 }
 
-.hero img{
-width:90%;
-max-width:750px;
-border-radius:12px;
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero button{
+background:#c79b3b;
+border:none;
+padding:14px 28px;
+border-radius:30px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 10%;
+text-align:center;
+}
+
+.about h2{
+color:#c79b3b;
+margin-bottom:20px;
+}
+
+.about p{
+max-width:700px;
+margin:auto;
+line-height:1.7;
 }
 
 /* PRODUCTS */
 
 .products{
-max-width:850px;
-margin:auto;
-padding:40px 20px;
+padding:80px 10%;
 }
 
-/* PRODUCT CONTAINER */
-
-.product{
-display:flex;
-align-items:center;
-justify-content:space-between;
-background:#efe5d6;
-padding:14px 18px;
-margin-bottom:16px;
-border-radius:35px;
-box-shadow:0 6px 14px rgba(0,0,0,0.08);
-transition:0.2s;
+.products h2{
+text-align:center;
+margin-bottom:40px;
+color:#c79b3b;
 }
 
-.product:hover{
-transform:scale(1.01);
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
 }
 
-/* LEFT SIDE */
-
-.product-left{
-display:flex;
-align-items:center;
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* GOLD NUMBER */
-
-.number{
-background:#b98a2f;
-color:white;
-width:38px;
-height:38px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
-margin-right:15px;
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
 }
 
-/* PRODUCT NAME */
-
-.product-name{
-font-size:16px;
-font-weight:500;
-color:#3d3427;
+.card h4{
+margin-bottom:10px;
 }
 
-/* ORDER BUTTON */
-
-.order-btn{
-background:#b98a2f;
+.card button{
+background:#c79b3b;
 border:none;
-color:white;
-padding:8px 18px;
+padding:10px 20px;
 border-radius:20px;
+color:white;
 cursor:pointer;
-font-size:14px;
 }
 
-.order-btn:hover{
-background:#a67925;
+/* REVIEWS */
+
+.reviews{
+padding:80px 10%;
+background:#fff7e5;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
 
 footer{
+background:#222;
+color:white;
 text-align:center;
 padding:40px;
-color:#7a6b55;
-font-size:14px;
+margin-top:60px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 </style>
+
 </head>
 
 <body>
 
+<nav>
 
-<header>
+<h2>Honeybee Skin</h2>
 
-<h1>Honeybee Skin Solution</h1>
-
-<p>Natural Luxury Skincare</p>
-
-</header>
-
-
-<div class="hero">
-
-<img src="products.jpg" alt="Honeybee Skin Products">
-
+<div>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#reviews">Reviews</a>
 </div>
 
+</nav>
 
-<section class="products">
+<!-- HERO -->
 
+<section class="hero">
 
-<div class="product">
-<div class="product-left">
-<div class="number">1</div>
-<div class="product-name">Stretch Mark Soap & Peeling Gel with Oil</div>
+<div>
+
+<h1>Glow Naturally With Honeybee Skin Solution</h1>
+
+<p>Premium skincare products designed to nourish and brighten your skin.</p>
+
+<button onclick="scrollProducts()">Browse Products</button>
+
 </div>
-<button class="order-btn" onclick="order('Stretch Mark Soap & Peeling Gel with Oil')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">2</div>
-<div class="product-name">7 Days Super Whitening</div>
-</div>
-<button class="order-btn" onclick="order('7 Days Super Whitening')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">3</div>
-<div class="product-name">Carrot Glow Oil</div>
-</div>
-<button class="order-btn" onclick="order('Carrot Glow Oil')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">4</div>
-<div class="product-name">Anti Bacteria Treatment Set For Face</div>
-</div>
-<button class="order-btn" onclick="order('Anti Bacteria Treatment Set For Face')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">5</div>
-<div class="product-name">Brightening Glow Face Cream</div>
-</div>
-<button class="order-btn" onclick="order('Brightening Glow Face Cream')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">6</div>
-<div class="product-name">Lightening Soap For All Skin Type</div>
-</div>
-<button class="order-btn" onclick="order('Lightening Soap For All Skin Type')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">7</div>
-<div class="product-name">Instant Knuckles Soap</div>
-</div>
-<button class="order-btn" onclick="order('Instant Knuckles Soap')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">8</div>
-<div class="product-name">Instant Knuckles Oil</div>
-</div>
-<button class="order-btn" onclick="order('Instant Knuckles Oil')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">9</div>
-<div class="product-name">Perfume</div>
-</div>
-<button class="order-btn" onclick="order('Perfume')">Order</button>
-</div>
-
-
-<div class="product">
-<div class="product-left">
-<div class="number">10</div>
-<div class="product-name">Pink Lips</div>
-</div>
-<button class="order-btn" onclick="order('Pink Lips')">Order</button>
-</div>
-
 
 </section>
 
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2>About Honeybee Skin Solution</h2>
+
+<p>
+
+Honeybee Skin Solution provides high-quality skincare products made to
+enhance natural beauty and confidence. Our products are carefully
+formulated to treat stretch marks, brighten skin tone, hydrate, and
+restore glow using powerful skincare ingredients.
+
+</p>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+<h2>Our Products</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="products/stretch.jpg">
+<h4>Stretch Mark Soap & Peeling Gel</h4>
+<button onclick="order('Stretch Mark Soap & Peeling Gel')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/whitening.jpg">
+<h4>7 Days Super Whitening</h4>
+<button onclick="order('7 Days Super Whitening')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/carrot.jpg">
+<h4>Carrot Glow Oil</h4>
+<button onclick="order('Carrot Glow Oil')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/antibacteria.jpg">
+<h4>Anti Bacteria Face Treatment</h4>
+<button onclick="order('Anti Bacteria Treatment Set')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/cream.jpg">
+<h4>Brightening Glow Face Cream</h4>
+<button onclick="order('Brightening Glow Face Cream')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/lightening.jpg">
+<h4>Lightening Soap</h4>
+<button onclick="order('Lightening Soap')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/knuckle-soap.jpg">
+<h4>Instant Knuckles Soap</h4>
+<button onclick="order('Instant Knuckles Soap')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/knuckle-oil.jpg">
+<h4>Instant Knuckles Oil</h4>
+<button onclick="order('Instant Knuckles Oil')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/perfume.jpg">
+<h4>Perfume</h4>
+<button onclick="order('Perfume')">Order</button>
+</div>
+
+<div class="card">
+<img src="products/pinklips.jpg">
+<h4>Pink Lips</h4>
+<button onclick="order('Pink Lips')">Order</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+<h2 style="text-align:center;color:#c79b3b;margin-bottom:30px;">Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+"Honeybee stretch mark soap worked perfectly for me!"
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+"My skin is glowing after using the carrot glow oil."
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+"Very effective skincare products. Highly recommended!"
+</div>
+
+</div>
+
+</section>
 
 <footer>
 
 © 2026 Honeybee Skin Solution
 
+<br><br>
+
+WhatsApp: 07041680517 / 09014184352
+
 </footer>
 
+<a class="whatsapp" href="https://wa.me/2347041680517">Chat on WhatsApp</a>
 
 <script>
 
 function order(product){
 
-let phone = "2348145934938"
+let phone="2347041680517"
 
-let message = "Hello Honeybee Skin Solution, I want to order: " + product
+let msg="Hello Honeybee Skin Solution, I want to order: "+product
 
-let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+let url="https://wa.me/"+phone+"?text="+encodeURIComponent(msg)
 
 window.open(url,'_blank')
 
 }
 
-</script>
+function scrollProducts(){
 
+document.getElementById("products").scrollIntoView({behavior:"smooth"})
+
+}
+
+</script>
 
 </body>
 </html>
